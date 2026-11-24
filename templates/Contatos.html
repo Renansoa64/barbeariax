@@ -1,0 +1,66 @@
+
+{% extends "base.html" %}
+
+{% block setting %}
+    {{ super() }}
+    <title>Contatos - Barbearia X</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <h2>Nos Contate!</h2>
+
+    <form action="#" method="POST">
+
+        <div class="mb-3 mt-3">
+            <label for="name">Nome:</label>
+            <input type="text" class="form-control" id="name"
+                placeholder="Coloque seu nome completo" name="name" required>
+        </div>
+
+        <div class="mb-3 mt-3">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email"
+                placeholder="Coloque o seu email" name="email" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="contact">Comentário:</label>
+            <textarea class="form-control comentario" id="contact"
+                placeholder="Coloque seu comentário" name="text" rows="4" required></textarea>
+        </div>
+
+        <button type="button" class="btn btn-primary button"
+            data-bs-toggle="modal" data-bs-target="#myModal">
+            Enviar
+        </button>
+
+    </form>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="modal-title">Enviado com sucesso</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                Obrigado por entrar em contato! Em breve responderemos sua mensagem.
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">
+                    Fechar
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

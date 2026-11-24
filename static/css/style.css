@@ -1,0 +1,78 @@
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: "Comic Sans MS", sans-serif;
+}
+
+.fixador {
+  position: sticky;
+  top: 0;
+  padding: 5px;
+}
+
+.comentario {
+    height: 120px;
+}
+
+.borda {
+    border-style: solid;
+}
+
+h1{
+    color: white;
+}
+
+a{
+    color: gray;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+.conteudo {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.esquerda {
+    flex: 1;
+    text-align: right;
+}
+
+.esquerda img {
+    width: 100%;
+    max-width: 300px;
+    margin: 15px 0;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+.direita {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+}
+
+.direita img {
+    width: 100%;
+    max-width: 300px;
+    margin: 15px 0;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .esquerda,
+    .direita {
+        text-align: center;
+        padding-right: 0;
+    }
+}

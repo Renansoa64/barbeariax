@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+
+{% block setting %}
+    {{ super() }}
+    <title>Inicio - Barbearia X</title>
+{% endblock %}
+
+{% block content %}
+
+<div class="p-5 text-center bg-image rounded-3 encaixador" style="
+    background-image: url('{{ url_for('static', filename='img/hero.png') }}');
+    height: 450px;
+    background-size: cover;
+    background-position: center;">
+    <div class="mask" style="background-color: rgba(0, 0, 0, 0.6); height: 100%;">
+        <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+                <h1 class="mb-3">Nosso Objetivo</h1>
+                <h4 class="mb-3">Fazer pessoas felizes e se expressarem com estilo.</h4>
+                <a class="btn btn-outline-light btn-lg" href="#!" role="button">
+                    Chama nois no zap!
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
